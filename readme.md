@@ -12,11 +12,6 @@ Questo progetto è una semplice implementazione del classico gioco **Memory** re
 
 ---
 
-## Demo Online
-
-Puoi provare il gioco live a questo link:  
-[https://tuo-progetto.vercel.app](https://tuo-progetto.vercel.app)
-
 
 ## Funzionalità implementate
 
