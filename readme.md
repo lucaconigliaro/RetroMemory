@@ -1,14 +1,12 @@
-# Retro Memory
-
-## Descrizione
+# Retro Memory 👾
 
 Questo progetto è una semplice implementazione del classico gioco **Memory** realizzata con solo **HTML**, **CSS** e **JavaScript**. L’obiettivo del gioco è mettere alla prova la memoria visiva del giocatore, abbinando tutte le coppie di carte identiche nel minor numero di errori possibile.
+
+🔗 Demo live: https://retro-memory.vercel.app
 
 ## 📸 Screenshot
 
 ![Screenshot del gioco](/images/screen.png)
-
-
 
 ---
 
