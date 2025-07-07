@@ -1,0 +1,102 @@
+body {
+  background-color: #000033;
+  color: #f70b69;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  padding: 20px;
+}
+
+#hero-logo {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+#rules {
+  color: white;
+  font-size: 10px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px #000066;
+}
+
+#score {
+  margin-bottom: 10px;
+}
+
+#difficulty-buttons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  font-size: 10px;
+}
+
+.difficulty-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #f70b69;
+  padding: 5px 8px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.difficulty-button:hover {
+  background-color: #f70b69;
+  color: white;
+}
+
+.difficulty-button.selected {
+  background-color: #f70b69;
+  color: #000033;
+  box-shadow: 0 0 5px #f70b69;
+}
+
+#restart, #play-again, #toggle-music {
+  background-color: transparent;
+  color: #f70b69;
+  border: 2px solid #f70b69;
+  padding: 5px 10px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 440px;
+  margin: 20px auto;
+  gap: 10px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #f70b69;
+  background-color: #000066;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-shrink: 0;
+}
+
+.card.win {
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #f70b69; }
+  to { box-shadow: 0 0 30px #f70b69; transform: scale(1.1); }
+}
+
+#message {
+  margin-top: 20px;
+}

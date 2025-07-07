@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Memory Retro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<img src="images/logo.png" alt="Logo" id="hero-logo" />
+
+<h1>MEMORY RETRO</h1>
+<p id="rules">Abbina i singoli uguali e scopri tutta la griglia</p>
+
+<div id="score">
+  Errori: <span id="errors">0</span> | Vittorie di fila: <span id="streak">0</span>
+</div>
+
+<div id="difficulty-buttons">
+  <span>Difficoltà:</span>
+  <button class="difficulty-button selected" data-difficulty="easy">Facile</button>
+  <button class="difficulty-button" data-difficulty="medium">Medio</button>
+  <button class="difficulty-button" data-difficulty="hard">Difficile</button>
+</div>
+
+<button id="restart">Nuova partita</button>
+<button id="toggle-music">🔊 Musica ON</button>
+
+<div id="board"></div>
+
+<div id="message" style="display:none;">
+  <p id="message-text"></p>
+  <button id="play-again">Gioca ancora</button>
+</div>
+
+<audio id="win-sound" src="sounds/win.mp3"></audio>
+<audio id="flip-sound" src="sounds/flip.mp3"></audio>
+<audio id="bg-music" src="sounds/music.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
