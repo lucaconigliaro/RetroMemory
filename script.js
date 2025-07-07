@@ -19,7 +19,7 @@ const bgMusic = document.getElementById('bg-music');
 const musicToggle = document.getElementById('toggle-music');
 
 let musicPlaying = false;
-musicToggle.textContent = '🔇 Musica OFF';
+musicToggle.textContent = ' Musica OFF';
 
 // Bottone per attivare o disattivare la musica
 musicToggle.addEventListener('click', () => {
@@ -27,17 +27,17 @@ musicToggle.addEventListener('click', () => {
     // Se musica accesa, la metto in pausa e aggiorno bottone
     bgMusic.pause();
     musicPlaying = false;
-    musicToggle.textContent = '🔇 Musica OFF';
+    musicToggle.textContent = ' Musica OFF';
   } else {
     // Se musica spenta, imposto volume, faccio partire la musica e aggiorno bottone
     bgMusic.volume = 0.3;
     bgMusic.play().then(() => {
       musicPlaying = true;
-      musicToggle.textContent = '🔊 Musica ON';
+      musicToggle.textContent = ' Musica ON';
     }).catch(() => {
       // Se il browser blocca l’audio, rimango in stato OFF
       musicPlaying = false;
-      musicToggle.textContent = '🔇 Musica OFF';
+      musicToggle.textContent = ' Musica OFF';
     });
   }
 });
@@ -183,6 +183,18 @@ function showMessage(text) {
 // Eventi per i bottoni "Nuova partita" e "Gioca ancora"
 document.getElementById('restart').addEventListener('click', () => createBoard(true));
 document.getElementById('play-again').addEventListener('click', () => createBoard(false));
+
+// Regole del gioco
+const toggleRulesBtn = document.getElementById('toggle-rules');
+const gameRules = document.getElementById('game-rules');
+
+toggleRulesBtn.addEventListener('click', () => {
+  const isVisible = !gameRules.hidden;
+  gameRules.hidden = isVisible;
+  toggleRulesBtn.textContent = isVisible
+    ? 'Mostra regole del gioco'
+    : 'Nascondi regole del gioco';
+});
 
 // Inizializzo la board alla prima apertura
 createBoard(true);
